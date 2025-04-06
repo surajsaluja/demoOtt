@@ -1,0 +1,14 @@
+.ContentRow{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+.ContentWrapper{
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  } 
+  

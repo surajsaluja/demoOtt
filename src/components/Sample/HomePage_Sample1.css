@@ -1,0 +1,149 @@
+/* styles.css */
+.app-container {
+    background-color: #221c35;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .menu-wrapper {
+    flex: 1;
+    max-width: 246px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 37px;
+  }
+  
+  .menu-item-box {
+    width: 171px;
+    height: 51px;
+    background-color: #b056ed;
+    border-color: white;
+    border-style: solid;
+    border-width: 0;
+    box-sizing: border-box;
+    border-radius: 7px;
+    margin-bottom: 37px;
+  }
+  
+  .menu-item-box.focused {
+    border-width: 6px;
+  }
+  
+  .nm-logo {
+    height: 57px;
+    width: 175px;
+    margin-bottom: 51px;
+  }
+  
+  .asset-wrapper {
+    margin-right: 22px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .asset-box {
+    width: 225px;
+    min-width: 225px;
+    height: 127px;
+    border-color: white;
+    border-style: solid;
+    border-width: 0;
+    box-sizing: border-box;
+    border-radius: 7px;
+  }
+
+  .image-asset{
+    position: absolute;
+  }
+  
+  .asset-box.focused {
+    border-width: 6px;
+  }
+  
+  .asset-title {
+    color: white;
+    margin-top: 10px;
+    font-family: 'Segoe UI';
+    font-size: 24px;
+    font-weight: 400;
+  }
+  
+  .content-row-wrapper {
+    margin-bottom: 37px;
+  }
+  
+  .content-row-title {
+    color: white;
+    margin-bottom: 22px;
+    font-size: 27px;
+    font-weight: 700;
+    font-family: 'Segoe UI';
+    padding-left: 60px;
+  }
+  
+  .content-row-scrolling-wrapper {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    flex-shrink: 1;
+    flex-grow: 1;
+    padding-left: 60px;
+  }
+  
+  .content-row-scrolling-content {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .content-wrapper {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content-title {
+    color: white;
+    font-size: 48px;
+    font-weight: 600;
+    font-family: 'Segoe UI';
+    text-align: center;
+    margin-top: 52px;
+    margin-bottom: 37px;
+  }
+  
+  .selected-item-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .selected-item-box {
+    height: 282px;
+    width: 1074px;
+    margin-bottom: 37px;
+    border-radius: 7px;
+  }
+  
+  .selected-item-title {
+    position: absolute;
+    bottom: 75px;
+    left: 100px;
+    color: white;
+    font-size: 27px;
+    font-weight: 400;
+    font-family: 'Segoe UI';
+  }
+  
+  .scrolling-rows {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    flex-shrink: 1;
+    flex-grow: 1;
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
