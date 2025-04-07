@@ -1,0 +1,18 @@
+const BASE_URL = `https://testapi.kableone.com/Api`;
+
+const API = {
+    AUTH:{
+        LOGIN:`${BASE_URL}/LiveTV/TVLogin`,
+        POST_USERACCOUNT_STATUS: `${BASE_URL}/Account/GetUserAccountStatusv2`,
+        POST_APPSESSION:`${BASE_URL}/LiveTV/AppProgress`,
+        GET_APIKEY:`${BASE_URL}/Account/GetApikeyV2`,
+        GET_USERACTIVE_INDICATOR: `${BASE_URL}/User/GetUserActiveIndicator`,
+    },
+    HOMEPAGE:{
+        // GET 1st homepage data
+        GET_HOMEPAGE_DATA: (userId)=> `${BASE_URL}/Content/GetHomeData?section=Home&userId=${userId ?? 0}&source=tv`,
+        // GET homepage data for pagination
+        GET_PLAYLIST_DATA: (section, userId, page, pageSize) => `${BASE_URL}/Content/GetPlaylistData/${section ?? 5}/${userId ?? 0}/${page ?? 1}/${pageSize ?? 10}`
+    }
+}
+

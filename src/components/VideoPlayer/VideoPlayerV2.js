@@ -5,7 +5,7 @@ import { setFocus } from '@noriginmedia/norigin-spatial-navigation';
 import Popup from './Popup';
 import SideBar_Tab from './SideBar_Tab';
 import { useLocation } from 'react-router-dom';
-import { MdFastForward, MdFastRewind, MdOutlinePause, MdPauseCircleOutline, MdPlayArrow, MdPlayCircleOutline } from 'react-icons/md';
+import { MdFastForward, MdFastRewind, MdOutlinePause, MdPlayArrow} from 'react-icons/md';
 
 const VideoPlayer = () => {
     const location = useLocation();
@@ -22,7 +22,6 @@ const VideoPlayer = () => {
     const [isPlaying, setIsPlaying] = useState(true);
     const[showPlayIcon,setShowPlayIcon] = useState(false);
     const playIconTimeout = useRef(null);
-    // const [isUserActive, setIsUserActive] = useState(false);
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
     // captions
@@ -116,8 +115,6 @@ const VideoPlayer = () => {
         e.preventDefault();
         e.stopPropagation();
 
-        console.log('vp called');
-
         if (sidebarOpenRef.current) {
             if (e.keyCode === 10009 || e.keyCode === 8) {
                 onSettingsPressed();
@@ -141,7 +138,6 @@ const VideoPlayer = () => {
             return;
         }
         else {
-            console.log('in def');
             switch (e.keyCode) {
                 case 13:
                     togglePlayPause();

@@ -2,8 +2,8 @@ import React, { useCallback, useEffect, useRef } from 'react'
 import { FocusContext, useFocusable } from '@noriginmedia/norigin-spatial-navigation'
 import FocusableButton from '../FocusableButton/FocusableButton'
 import './Menu.css';
-
-function Menu({ focusKey, Menu }) {   
+import { withRouter } from 'react-router-dom';
+function Menu({ focusKey, Menu, location, history }) {   
 
     const { ref, focusKey: currentFocusKey, hasFocusedChild } = useFocusable({
         focusable: true,
@@ -22,7 +22,7 @@ function Menu({ focusKey, Menu }) {
     }),[menuScrollingRef]);
 
     const onMenuEnterPress = () =>{
-        alert('Menu Pressed');
+        history.push("/search",{});
     }
 
     return (
@@ -45,4 +45,4 @@ function Menu({ focusKey, Menu }) {
     )
 }
 
-export default Menu
+export default withRouter(Menu)
